@@ -31,7 +31,7 @@ jobs:
           version: "v1.26.2"
 
       - run: |
-          git tag -a v1.0.0-manual.`TZ=Asia/Shanghai date +"%Y%m%d.%H.%M.%S"` -m "release by manual"
+          git tag -a v1.0.0-manual.`TZ=Asia/Shanghai date +"%Y%m%d.t%H%M%S"` -m "release by manual"
           cd uifd/service/
           goreleaser --snapshot --clean
           cd ..
