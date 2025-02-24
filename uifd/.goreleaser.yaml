@@ -57,7 +57,7 @@ archives:
 
 release:
   github:
-    owner: UIforFreedom
+    owner: DiamondHunters
     name: UIF
   name_template: "{{ .Version }}"
   # draft: true
