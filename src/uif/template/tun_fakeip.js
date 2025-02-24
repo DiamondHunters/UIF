@@ -241,6 +241,11 @@ export function AddTun(res, config) {
       fakeRange.push(ipv6Range)
     }
 
+   
+    if(!tun["auto_route"]){
+      tun['route_address'] = [setting['inet4_range']]
+    }
+
     fakeip['enabled'] = true
     fakeip['inet4_range'] = setting['inet4_range']
 
