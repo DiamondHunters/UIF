@@ -113,6 +113,12 @@
       </el-col>
 
       <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
+        <el-form-item label="仅路由fakeip">
+          <el-switch v-model="outbound_obj.setting.fakeip_route" v-if="outbound_obj.setting.auto_route == true"> </el-switch>
+        </el-form-item>
+      </el-col>
+
+      <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
         <el-form-item label="MTU">
           <el-input
             v-model.number="outbound_obj.setting.mtu"
@@ -147,6 +153,7 @@ export default {
 
       auto_route: true,
       strict_route: false,
+      fakekip_route: false,
       mtu: 9000,
       stack: "system",
       mode: "fakeip",

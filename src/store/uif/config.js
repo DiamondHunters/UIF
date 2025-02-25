@@ -151,6 +151,7 @@ export function newDefaultTunIn(mode) {
     auto_route: true,
     mtu: 9000,
     strict_route: false,
+    fakeip_route: false,
     stack: "gvisor",
     mode: mode,
   };
